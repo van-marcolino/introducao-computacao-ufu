@@ -1,0 +1,49 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+#include <stdlib.h>
+
+#include <math.h>
+
+
+int main(){
+
+float x, y, m, n, h, w, c, aux1, aux2;
+
+printf("inserir valores das variaveis x, y, m, n, h, w \n");
+
+scanf("%f %f %f %f %f %f", &x, &y, &m, &n, &h, &w);
+
+aux1= x/h;
+
+aux2=m*n;
+
+aux2=m/aux2;
+
+aux1=aux1+aux2;
+
+c=2.0/3.0;
+
+aux2=pow(w,c);
+
+aux1=aux1-aux2;
+
+printf("%f", aux1);
+
+return 0;
+
+}
