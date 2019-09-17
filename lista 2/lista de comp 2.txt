@@ -1,0 +1,384 @@
+exercício 1) 
+
+int main(){
+   float a, b, media;
+   printf("insira duas notas entre 0 e 100.0 \n");
+   scanf("%f %f", &a, &b);
+   if(((a<0)||(a>100))||((b<0)||(b>100))){
+    printf("numeros n desejados \n");}
+   if(((a>0)||(a<100))&&((b>0)||(b<100)))
+    {
+    media=(a+b)/2;
+    if(media>=60){
+        printf("aprovado com nota igual a %f", media);}
+    else{
+        printf("reprovado com nota igual a %f", media);}
+        }
+        return 0;
+   }
+
+
+Exercicio 2)
+
+int main(){
+    float nota;
+    printf("insira a nota do aluno \n");
+    scanf("%f", &nota);
+    if(nota>=0 && nota<=100){
+    if(nota>=90 && nota<=100)
+    {printf("A");}
+    else{if(nota>=80)
+        printf("B");
+        else{if(nota>=70)
+            printf("C");
+            else{if(nota>=50)
+                printf("D");
+                else{printf("E");}}}}}
+    return 0;
+}
+
+
+Exercício 3)
+
+int main()
+{
+
+    float a, b, c, x1, x2, x;
+    printf("insira os valores de a, b e c \n");
+    scanf("%f %f %f", &a, &b, &c);
+    if(a!=0)
+    {
+        x=sqrt((b*b)-(4*a*c));
+        printf("valor %.2f \n", x);
+        if(((b*b)-(4*a*c))<0)
+        {
+            printf("nao existe solucao pertencente aos numeros reais para esse problema \n");
+        }
+        else
+        {
+            x1=(-b+x)/(2*a);
+            x2=(-b-x)/(2*a);
+
+            if(x1!=x2)
+            {
+                printf("as duas solucoes distintas para essa equacao sao x1= %.2f e x2= %.2f \n", x1, x2);
+            }
+            else
+            {
+                printf("x1 e x2 tem a mesma solucao, que e %.2f \n", x1);
+            }
+        }
+    }
+
+    else
+    {
+        printf("o sistema e linear, portanto possui a equacao igual a  %.2f x + %.2f \n", b, c);
+    }
+
+
+    return 0;
+}
+
+exercício 4)
+
+int main() {
+   float a, c, f;
+   printf("escolha a forma de conversao, digite 1 para conversao de C para F e digite 2 para conversao de F para C \n");
+   scanf("%f", &a);
+   if(a==1){
+    printf("insira o valor da temperatura C \n");
+    scanf("%f", &c);
+    f=(1.8*c)+32;
+    printf("valor da temperatura em F e igual a %f", f);}
+  if(a==2){
+    printf("insira o valor da temperatura F \n");
+    scanf("%f", &f);
+    c=(f-32)/(1.8);
+    printf("o valor da temperatura em C e igual a %f", c);
+  }
+    return 0;
+   }
+
+exercicio 5)
+
+int main(){
+   float sexo, pesoid= 0, peso= 0, h= 0, x= 0, y= 0;
+   printf("insira o genero do usuario, digite 1 para masculino e 2 para feminino \n");
+   fflush(stdin);
+   scanf("%f", &sexo);
+   printf("insira a altura do usuario \n");
+   fflush(stdin);
+   scanf("%f", &h);
+   printf("insira o peso do usuario \n");
+   fflush(stdin);
+   scanf("%f", &peso);
+    if(sexo==1){
+        pesoid=(72.7*h)-58;
+        printf("o peso ideal do usuario e %.2f \n", pesoid);
+        x=((peso*100)/pesoid);
+        y=x-100;
+        if(y>0.05){
+            printf("o usuario esta %.2f porcento acima do peso ideal \n", y);
+        }
+        else{
+            printf("o usuario esta %.2f porcento abaixo do peso ideal", y);
+        }}
+  if(sexo==2){
+        pesoid=(62.1*h)-44.7;
+        printf("o peso ideal do usuario e %.2f \n", pesoid);
+        x=((peso*100)/pesoid);
+        y=x-100;
+        if(y>0.05){
+            printf("o usuario esta %.2f porcento acima do peso ideal \n", y);
+        }
+        else{
+            printf("o usuario esta %.2f porcento abaixo do peso ideal \n", y);
+        }}
+
+}
+
+exercício 6)
+
+int main()
+{
+    float x, y, aux1, aux2, aux3;
+    printf("insira as coordenadas do ponto (x,y) \n");
+    fflush(stdin);
+    scanf("%f %f", &x, &y);
+    aux1=(x*x)/16;
+    aux2=(y*y)/25;
+    aux3=(aux1+aux2);
+    if (aux3>=1)
+    {
+        printf("\no ponto (%.0f,%.0f) esta contido na elipse", x, y);
+    }
+    else
+    {
+        printf("\no ponto (%.0f,%.0f) nao esta contido na elipse", x, y);
+    }
+
+return 0;
+}
+
+exercício 7)
+
+int main()
+{
+    float vendas, x;
+    printf("insira o valor da quantidade de vendas que o funcionario fez \n");
+    scanf("%f", &vendas);
+    if(vendas>=10000)
+        x=2000+(vendas*0.08);
+      else
+        x=2000+(vendas*0.05);
+     printf("valor do salario do funcionario %f", x);
+     return 0;
+}
+
+exercício 8)
+
+int main() {
+float num1, num2, a, x;
+printf("insira os dois numeros desejados \n");
+scanf("%f %f", &num1, &num2);
+printf("digite 1 para multiplicacao, 2 para divisao, 3 para subtracao e 4 para soma \n");
+printf("insira o numero da operacao desejada \n");
+scanf("%f", &a);
+if(a==1){
+    x=num1*num2;
+    printf("o resultado da multiplicacao e igual a %.2f", x);}
+    if(a==2){
+        x=num1/num2;
+        printf("o resultado da divisao e igual a %.2f", x);}
+        if(a==3){
+            x=num1-num2;
+            printf("o resultado da subtracao e igual a %.2f", x);}
+            if(a==4){
+                x=num1+num2;
+                printf("o resultado da soma e igual a %.2f", x);}
+ return 0;
+}
+
+
+exercicio 9)
+
+int main() {
+   int a;
+   printf("digite o numero \n");
+   scanf("%d", &a);
+   if(a % 2 == 0){
+    printf("o numero e par");
+   }
+   else {
+    printf("o numero e impar");
+   }
+   return 0;
+
+}
+
+exercício 10)
+
+#include <stdio.h>
+int main()
+{
+ int M;
+ float PLT100, PMT100, TPr;
+ printf("Enter the number of miles: ");
+ scanf("%d",&M);
+ if(M <= 100)
+ {
+ PLT100 = M * 0.25;
+ PMT100 = 0;
+ }
+ else
+ {
+ PLT100 = 100 * 0.25;
+ PMT100 = (M - 100) * 0.15;
+ }
+ TPr=PLT100+PMT100;
+ printf("\nTotal Price = %f", TPr);
+
+ return 0;
+}
+
+o usuario entra com uma variavel de numero inteiro denominada M que se refere ao numero de milhas. Se o valor inteiro colocado for menor ou igual a 100 milhas uma variavel do float PLT100 sera usada para uma operação de multiplicação que sera feita entre o numero inteiro e uma constante (M * 0.25) enquanto a outra variavel PMT100 foi igualada a zero. Se o numero escolhido pelo usuario for maior que 100, a variavel do float PLT100 sera igualada a uma multiplicação entre os numeros 100 e 0.25 (100 * 0.25), enquanto a outra variavel PMT100 sera igualada a uma multiplicação de 0.15 pela subtração da variavel inserida e 100 ((M - 100) * 0.15). Depois disso, dependedo da variavel escolhida o preço total sera calculado pela operação entre o valor da variavel do float PLT100 somado a variavel PMT100 (PLT100+PMT100) e o resultado sera mostrado na tela.
+
+a) caso o numero de entrada seja 95.4 o resultado sera 23.750000
+b) caso o numero de entrada seja 138 o resultado sera  30.700001
+
+exercício 11)
+
+int main()
+{
+    int a, b, c, aux1;
+    printf("insira os valores desejados \n");
+    scanf("%d %d %d", &a, &b, &c);
+    if (a>=b && b>=c)
+        printf("ordem decrescente sera %d %d %d", a, b, c);
+    else
+    {
+        if(a<b && a!=b)
+        {
+            aux1=a;
+            a=b;
+            b=aux1;
+
+        }
+        if(b<c && b!=c)
+        {
+            aux1=b;
+            b=c;
+            c=aux1;
+            if(b>a){
+                aux1=b;
+                b=a;
+                a=aux1;
+            }
+        }
+        if(a<c)
+        {
+            aux1=a;
+            a=c;
+            c=aux1;
+
+        }
+        printf("ordem decrescente sera %d %d %d", a, b, c);
+    }
+
+    return 0;
+}
+
+
+
+exercicio 12)
+
+int main(){
+  float a, b, c;
+  printf("insira as medidas dos lados de um triangulo \n");
+  scanf("%f %f %f", &a, &b, &c);
+    if(a>(b+c)||b>(a+c)||c>(a+b)){
+    printf("os valores insiridos nao formam um triangulo \n");}
+    else{
+        if((a==b)&&(b==c))
+            printf("o triangulo e equilatero \n");
+    else{
+      if (((a==c)&&(b!=c))||((b==c)&&(c!=a))||((a==b)&&(b!=c)))
+            printf("o tiangulo e isosceles \n");
+      else{
+        printf("o triangulo e escaleno \n");}}}
+        return 0;
+}
+
+exercício 13)
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+int main ()
+{
+    int num, x;
+    int t = 1;
+
+    srand (time(NULL));
+    x = rand() % 11;
+
+    while(num != x && t <= 3)
+    {
+        printf("Digite um numero entre 0 e 10 \n");
+        scanf("%d", &num);
+
+        if(num==x)
+            printf("voce acertou!!!");
+        else if(num != x)
+            printf("=====errado=====\n");
+        t++;
+    }
+    if(t == 3)
+        printf("\ntentativas esgotadas");
+    printf("\nO numero sorteado foi: %d", x);
+    return 0;
+}
+
+
+exercício 14)
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+int main ()
+{
+    int num, x;
+    int t = 1;
+
+    srand (time(NULL));
+    x = rand() % 11;
+
+    while(num != x && t <= 3)
+    {
+        printf("Digite um numero entre 0 e 10 \n");
+        scanf("%d", &num);
+
+        if(num==x)
+            printf("voce acertou!!!");
+        else
+        {
+            if(num>x)
+                printf("=====O valor sorteado e menor===== \n");
+            else
+            {
+                if(num<x)
+                    printf("=====O valor sorteado e maior===== \n");
+            }
+        }
+        if(num != x)
+            printf("=====errado=====\n");
+        t++;
+    }
+    if(t == 3)
+        printf("\ntentativas esgotadas");
+    printf("\nO numero sorteado foi: %d", x);
+    return 0;
+}
+
+

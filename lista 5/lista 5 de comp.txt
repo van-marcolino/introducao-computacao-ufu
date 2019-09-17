@@ -1,0 +1,280 @@
+==================================== questão 1)
+int maior (int x,int y)
+{
+    if(x>y) return x;
+    else return y;
+}
+int main()
+{
+    int x, y, a;
+    printf("Insira dois numeros: \n");
+    scanf("%d %d", &x, &y);
+    printf("O maior numero eh: %d", maior(x,y));
+    return 0;
+}
+==================================== questão 2)
+void mes (int m)
+{
+    if (m==1) printf("O mes 1 eh Janeiro.");
+    if (m==2) printf("O mes 2 eh Fevereiro.");
+    if (m==3) printf("O mes 3 eh Marco.");
+    if (m==4) printf("O mes 4 eh Abril.");
+    if (m==5) printf("O mes 5 eh Maio.");
+    if (m==6) printf("O mes 6 eh Junho.");
+    if (m==7) printf("O mes 7 eh Julho.");
+    if (m==8) printf("O mes 8 eh Agosto.");
+    if (m==9) printf("O mes 9 eh Setembro");
+    if (m==10) printf("O mes 10 eh Outubro.");
+    if (m==11) printf("O mes 11 eh Novembro.");
+    if (m==12) printf("O mes 12 eh Dezembro");
+    if((m>12)||(m<1)) printf("Numero Invalido");
+}
+int main ()
+{
+    int m;
+    printf("Insira um numero referente a um mes do ano: \n");
+    scanf("%d", &m);
+    mes(m);
+    return 0;
+}
+==================================== questão 3)
+float conversao (float t)
+{
+    float c;
+    c=(t-32)/1.8;
+    return c;
+}
+int main ()
+{
+    float temperatura;
+    printf("Insira uma temperatura em Farenheit para conversao para Celsius: \n");
+    scanf("%f", &temperatura);
+    printf("O numero convertido eh %f", conversao(temperatura));
+    return 0;
+}
+==================================== questão 4)
+float volume (float h, float r)
+{
+    float v;
+    v= h*r*r*3.14;
+    return v;
+}
+int main ()
+{
+    float h, r;
+    printf("Insira o valor da altura e do raio do cilindro:\n");
+    scanf("%f %f", &h, &r);
+    printf("O valor do volume eh %f", volume(h,r));
+    return 0;
+}
+==================================== questão 5)
+int hora (int h, int m, int s)
+{
+    int quantidade;
+    quantidade=(3600*h)+(60*m)+s;
+    return quantidade;
+}
+int main ()
+{
+    int h, m, s;
+    printf("Insira a quantidade de horas, minutos e segundos:\n");
+    scanf("%d %d %d", &h, &m, &s);
+    printf("A quantidade de segundos eh %d", hora(h,m,s));
+    return 0;
+}
+==================================== questão 6)
+void perfeito(int a)
+{
+    float aux, b;
+    int inteiro;
+    b=sqrt(a);
+    aux = a/4;
+    inteiro = b;
+    if(a%2 == 0 && inteiro == b) //o numero sendo par, entra aqui.
+    {
+        if ((int)b%2 == 0 && aux == (int)aux) // todo quadrado perfeito quando sai da raiz tem resultado par
+            printf("O numero %d eh um quadrado perfeito", a);
+        else
+            printf("O numero %d NAO eh um quadrado perfeito", a);
+    }
+    else // o numero sendo impar, entra aqui
+    {
+        if (a%8 == 1 && (int)b%2 != 0) // regra de que todo impar que é gradrado perfeito se for dividido por 8 tem resto 1 e toda raiz impar tem resultado impar.
+            printf("O numero %d eh um quadrado perfeito", a);
+        else
+            printf("O numero %d NAO eh um quadrado perfeito", a);
+    }
+}
+int main ()
+{
+    int a;
+    printf("Insira um numero inteiro:\n");
+    scanf("%d", &a);
+    perfeito(a);
+    return 0;
+}
+==================================== questão 7)
+float media (float n1, float n2, float n3)
+{
+    char a='a', p='p', c;
+    float mediaA, mediaP;
+    printf("Insira uma letra, 'a' para media aritmetica e 'p' para media ponderada:\n");
+    scanf("%s", &c);
+    switch (c)
+    {
+    case 'a':
+        mediaA = (n1+n2+n3)/3;
+        printf("Media Aritmetica igual a %f", mediaA);
+        break;
+    case 'p':
+        mediaP = (n1+(n2*2)+(n3*3))/6;
+        printf("Media Ponderada igual a %f", mediaP);
+        break;
+    default:
+        printf("Funcao nao desejada.");
+        return 0;
+    }
+    return 0;
+}
+int main ()
+{
+    float n1, n2, n3;
+    printf("Insira tres notas entre 0 e 100:\n");
+    scanf("%f %f %f", &n1, &n2, &n3);
+    if (n1>=0 && n2>=0 && n3>=0)
+    {
+        if (n1<=100 && n2<=100 && n3<=100)
+        {
+            media(n1,n2,n3);
+        }
+        else
+        {
+            printf("Numero n desejado");
+            return 0;
+        }
+    }
+    else
+    {
+        printf("Numero n desejado");
+        return 0;
+    }
+
+    return 0;
+}
+==================================== questão 8)
+float operacao (float x, float y)
+{
+    char a='+', b='-', c='*', d='/';
+    float soma, subtrai, multiplica, divide;
+    printf("Insira o simbolo de uma operacao '+', '-', '*', '/': \n");
+    scanf("%s", &c);
+    switch (c)
+    {
+    case '+':
+        soma = x+y;
+        printf("O valor da soma eh %f", soma);
+        break;
+    case '-':
+        subtrai = x-y;
+        printf("O valor da subtracao eh %f", subtrai);
+        break;
+    case '*':
+        multiplica = x*y;
+        printf("O valor da multiplicacao eh %f", multiplica);
+        break;
+    case '/':
+        if (y==0)
+        {
+            printf("100.000.\n");
+            printf("O denominador foi igual a zero, operacao invalida.");
+            break;
+        }
+        else
+        {
+        divide = x/y;
+        printf("O valor da divisao eh %f", divide);
+        break;
+        }
+    default:
+        return 0;
+    }
+    return 0;
+}
+int main ()
+{
+    float x, y;
+    printf("Insira dois numeros:\n");
+    scanf("%f %f", &x, &y);
+    operacao(x,y);
+    return 0;
+}
+==================================== questão 9)
+void fibonacci(int n)
+{
+    int a, b, aux, i;
+    a = 0;
+    b = 1;
+    printf("%d, %d, ",a, b);
+    for(i = 1; i < n; i++)
+    {
+        aux = a + b;
+        a = b;
+        b = aux;
+        if(i==(n-1))
+        {
+            printf(" %d.", aux);
+        }
+        else
+        {
+            printf(" %d,", aux);
+        }
+    }
+}
+int main()
+{
+    int n;
+    printf("Digite um numero: ");
+    scanf("%d", &n);
+    printf("Serie de Fibonacci:\n");
+    fibonacci(n);
+    return 0;
+}
+==================================== questão 10)
+int fatorial(int fat)
+{
+    int cont=fat, resultado=1;
+    do
+    {
+        resultado=resultado*cont;
+        cont--;
+    }
+    while(cont>0);
+    return resultado;
+
+}
+float sen(float x)
+{
+    int cont=0, y=0, z;
+    float soma=0;
+
+    do
+    {
+        y=2*cont+1;
+        z=fatorial(y);
+        soma=soma+(pow(-1,cont)*pow(x, y))/z;
+        cont++;
+    }
+    while(cont<=10);
+    return soma;
+
+}
+
+int main()
+{
+    float x, seno;
+    printf("Digite um valor de seno em graus:\n");
+    scanf("%f", &x);
+    seno=sen(x*M_PI/180);
+    printf("o valor aproximado do seno usando a formula de Taylor eh %f", seno);
+    return 0;
+}

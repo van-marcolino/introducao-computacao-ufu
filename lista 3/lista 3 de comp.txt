@@ -1,0 +1,1316 @@
+=================exercício 1)
+
+
+
+========================================================FOR
+
+
+
+int main()
+
+{
+
+    int N;
+
+    int count = 0;
+
+    printf("insira um valor para N: ");
+
+    scanf("%d", &N);
+
+    printf("ordem crescente ");
+
+    for(count = 1; count <= N; count++)
+
+    {
+
+        printf("%d ", count);
+
+    }
+
+    printf("ordem decrescente ");
+
+    for(count = N; count >= 1; count--)
+
+    {
+
+        printf("%d ", count);
+
+    }
+
+    getchar();
+
+    return 0;
+
+}
+
+
+
+=========================================================WHILE
+
+
+
+int main()
+
+{
+
+    int N, count = 1;
+
+    printf("insira um valor para N: ");
+
+    scanf("%d", &N);
+
+
+
+    printf("ordem crescente \n");
+
+    while(count <= N)
+
+    {
+
+        printf("%d ", count);
+
+        count++;
+
+    }
+
+
+
+    printf("\nordem decrescente \n");
+
+    count=N;
+
+    while(count >= 1)
+
+    {
+
+        printf("%d ", count);
+
+        count--;
+
+    }
+
+    getchar();
+
+    return 0;
+
+}
+
+
+
+=================exercício 2)
+
+============================================================FOR
+
+
+
+int main()
+
+{
+
+    int N, x;
+
+    int count;
+
+    printf("insira o numero desejado para fazer a tabuada: ");
+
+    scanf("%d", &N);
+
+    for(count = 1; count <= 10; count++)
+
+    {
+
+        x = N*count;
+
+        printf("%dx%d= %d \n", N, count, x);
+
+    }
+
+    return 0;
+
+}
+
+============================================================WHILE
+
+
+
+int main()
+
+{
+
+    int N, x;
+
+    int count = 0;
+
+    printf("insira o numero desejado para fazer a tabuada: ");
+
+    scanf("%d", &N);
+
+    while(count <= 10)
+
+    {
+
+        x = N*count;
+
+        printf("%dx%d= %d \n", N, count, x);
+
+        count++;
+
+    }
+
+    return 0;
+
+}
+
+
+
+=================exercicio 3)
+
+
+
+#include <stdlib.h>
+
+#include <stdio.h>
+
+#include <math.h>
+
+int main()
+
+{
+
+    int i, f, d1, d2, maior, menor, aux;
+
+    printf("insira o intervalo de numeros: \n");
+
+    scanf("%d %d", &i, &f);
+
+    printf("insira os dois numeros para descobrir seus divisores: \n");
+
+    scanf("%d %d", &d1, &d2);
+
+    if(i > f)
+
+    {
+
+        maior=i;
+
+        menor=f;
+
+    }
+
+    else
+
+    {
+
+        maior=f;
+
+        menor=i;
+
+    }
+
+    aux=menor;
+
+    printf("os divisores de %d e %d sao", d1, d2);
+
+    while(aux <= maior)
+
+    {
+
+        if(aux%d1==0 && aux%d2==0)
+
+        {
+
+        printf("\n%d \n", aux);
+
+        }
+
+        aux++;
+
+    }
+
+
+
+    return 0;
+
+
+
+}
+
+
+
+=================exercício 4)
+
+
+
+int main(void)
+
+{
+
+    int x;
+
+    printf("digite um valor entre 40 e 255: ");
+
+    scanf("%d", &x);
+
+    if(x < 40 || x > 255){
+
+        printf("valor n desejado");
+
+    }
+
+    else {printf("%c", x);
+
+    if(x< 'a')
+
+        getchar();
+
+    return 0;
+
+}}
+
+
+
+=================exercicio 5)
+
+
+
+===========================================================FOR
+
+
+
+int main()
+
+{
+
+    int fat, N;
+
+    printf("insira o valor do numero para calcular o fatorial: \n");
+
+    scanf("%d", &N);
+
+
+
+    for(fat = 1; N >= 1; N = N - 1)
+
+    {
+
+        fat = fat * N;
+
+    }
+
+
+
+    printf("fatorial calculado= %d", fat);
+
+    return 0;
+
+}
+
+
+
+
+
+===========================================================WHILE
+
+
+
+int main()
+
+{
+
+    int fat = 1;
+
+    int i = 1;
+
+    int N;
+
+    printf("insira o valor do numero para calcular o fatorial: \n");
+
+    scanf("%d", &N);
+
+
+
+    while(i <= N)
+
+    {
+
+        fat = fat * i;
+
+        i++;
+
+    }
+
+    printf("fatorial calculado= %d \n", fat);
+
+
+
+    return 0;
+
+}
+
+
+
+=================exercicio 6)
+
+
+
+=======================================================INSERINDO O VALOR DE N
+
+
+
+int main()
+
+{
+
+    float N, i, valor, soma1, soma2, mediaA, mediaH;
+
+
+
+    printf("Digite a quantidade de numeros: ");
+
+    scanf("%f", &N);
+
+    i = 1;
+
+
+
+    while(i <= N)
+
+    {
+
+        printf("insira os numeros: \n");
+
+        scanf("%f", &valor);
+
+        soma1 = soma1 + (1/(valor));
+
+        soma2 = soma2 + valor;
+
+
+
+        i++;
+
+    }
+
+
+
+    mediaH = N/soma1;
+
+    mediaA = soma2/N;
+
+    printf("\nMedia Harmonica: %f\n", mediaH);
+
+    printf("\nMedia Aritmetica: %f\n", mediaA);
+
+    return 0;
+
+}
+
+
+
+=========================================================INSERINDO ZERO
+
+
+
+int main()
+
+{
+
+    float N, valor, soma1 = 0, soma2 = 0, mediaA, mediaH;
+
+    printf("Insira os numeros para fazer a media aritmetica e a media harmonica: \n");
+
+    printf("Digite 0 para terminar o programa \n\n");
+
+
+
+    do
+
+    {
+
+        printf("Digite o valor \n");
+
+        scanf("%f", &valor);
+
+        if(valor != 0 ){
+
+        soma1 = soma1 + (1/valor);
+
+        soma2 = soma2 + valor;
+
+        N++;
+
+        printf("%f \n", soma1);}
+
+    }
+
+    while(valor != 0);
+
+
+
+    mediaH = (N)/soma1;
+
+    mediaA = soma2/(N);
+
+    printf("\nMedia Aritmetica: %f\n", mediaA);
+
+    printf("\nMedia Harmonica: %f\n", mediaH);
+
+    printf("\nA quantidade de numeros inseridos foi igual a %f\n", N);
+
+    return 0;
+
+}
+
+
+
+
+
+=================exercicio 7)
+
+
+
+int main()
+
+{
+
+    int i, x;
+
+    int y = 0;
+
+    printf("digite um numero inteiro e positivo: \n");
+
+    scanf("%d", &x);
+
+
+
+    for(i = 1; i <= x; i++)
+
+    {
+
+        if(x % i == 0)
+
+        {
+
+            y++;
+
+        }
+
+    }
+
+    if (y == 2)
+
+        printf("o numero %d e primo! \n", x);
+
+    else
+
+        printf("o numero %d nao e primo! \n", x);
+
+    return 0;
+
+}
+
+
+
+=================exercicio 8)
+
+
+
+
+
+#include <stdlib.h>
+
+#include <stdio.h>
+
+#include <math.h>
+
+int main()
+
+{
+
+    int linha, coluna, i, t, count, count1;
+
+    char L;
+
+    printf("insira os quantidade de linhas e colunas: \n");
+
+    scanf("%d %d", &linha, &coluna);
+
+    fflush(stdin);
+
+    printf("insira o caractere desejado: \n");
+
+    scanf("%c", &L);
+
+    printf("\n\n");
+
+    for(i = 0; i < linha; i++)
+
+    {
+
+        for(t = 0; t < coluna; t++)
+
+        {
+
+            printf("%c", L);
+
+        }
+
+        printf("\n");
+
+    }
+
+    printf("\n\n");
+
+    for(i = 0; i < linha; i++)
+
+    {
+
+        for(t = 0; t < coluna; t++)
+
+        {
+
+            if ((i==0 || i==linha-1)||(t==0 || t==coluna-1))
+
+            {
+
+                printf("%c", L);
+
+            }
+
+            else
+
+            {
+
+                printf(" ");
+
+            }
+
+            if(t==coluna-1)
+
+            {
+
+                printf(" ");
+
+            }
+
+        }
+
+        printf("\n");
+
+    }
+
+    printf("\n\n");
+
+    count=0;
+
+    for(i = 0; i < linha; i++)
+
+    {
+
+        count=i+1;
+
+        for(t = 0; t < coluna; t++)
+
+        {
+
+            if (count != 0)
+
+            {
+
+                printf("%c", L);
+
+                count--;
+
+            }
+
+
+
+        }
+
+        printf("\n");
+
+    }
+
+    printf("\n\n");
+
+    count=linha;
+
+    count1=0;
+
+    for(i = 0; i < linha; i++)
+
+    {
+
+        count=linha-i;
+
+        count1=i+1;
+
+        for(t = 0; t < coluna; t++)
+
+        {
+
+            if (count != 0)
+
+            {
+
+                printf(" ");
+
+                count--;
+
+                if(count == 0)
+
+                {
+
+                    while(count1 != 0)
+
+                    {
+
+                        printf("%c", L);
+
+                        count1--;
+
+                    }
+
+                }
+
+            }
+
+
+
+
+
+        }
+
+        printf("\n");
+
+    }
+
+    printf("\n\n");
+
+
+
+    for(i = 0; i < linha; i++)
+
+    {
+
+        count=i;
+
+        count1=linha-1;
+
+        for(t = 0; t < coluna; t++)
+
+        {
+
+            if (count != 0)
+
+            {
+
+                printf(" ");
+
+                count--;
+
+            }
+
+            else
+
+            {
+
+                printf("%c", L);
+
+            }
+
+
+
+
+
+        }
+
+        printf("\n");
+
+    }
+
+
+
+
+
+
+
+
+
+    return 0;
+
+}
+
+
+
+
+
+
+
+=================exercicio 9)
+
+
+
+=====================================================================A)
+
+
+
+#include <stdlib.h>
+
+#include <stdio.h>
+
+#include <time.h>
+
+
+
+int main()
+
+{
+
+    int num, x, w;
+
+    int t = 1;
+
+
+
+    srand(time(NULL));
+
+    x = rand() % 21;
+
+
+
+    printf("digite o numero de tentativas:  ");
+
+    scanf("%d", &w);
+
+
+
+    printf("\n\n===digite um numero de 1 a 20===\n\n");
+
+
+
+    while (num != x && t <= w)
+
+    {
+
+        printf("\nDigite um numero: ");
+
+        scanf("%d", &num);
+
+
+
+        if (t >= w)
+
+            printf("\n\ntentativas esgotadas\n\n");
+
+        else if(num == x)
+
+            printf("\n\nvoce acertou\n\n");
+
+        else if(num > x)
+
+            printf("\n====o valor e menor:====\n");
+
+        else if(num < x)
+
+            printf("\n====o numero e maior:====\n");
+
+        else if(num != x)
+
+            printf("=====errado=====");
+
+            printf("\n\no valor era %d\n\n", x);
+
+
+
+        t++;
+
+    }
+
+
+
+    return 0;
+
+
+
+}
+
+
+
+================================================================ B)
+
+
+
+#include <stdlib.h>
+
+#include <stdio.h>
+
+#include <time.h>
+
+
+
+int main()
+
+{
+
+    int num, x;
+
+    int t = 0;
+
+
+
+    srand(time(NULL));
+
+    x = rand() % 20;
+
+
+
+    printf("===digite um numero de 1 a 20===\n\n");
+
+
+
+    while (num != x)
+
+    {
+
+        printf("\nDigite um numero: ");
+
+        scanf("%d", &num);
+
+
+
+        if(num == x)
+
+            printf("\n\nvoce acertou: numero de tentativas >> %d <<\n\n", t);
+
+        else if(num > x)
+
+            printf("\n====o valor e menor:====\n");
+
+        else if(num < x)
+
+            printf("\n====o numero e maior:====\n");
+
+        else if(num != x)
+
+            printf("=====errado=====");
+
+        t++;
+
+    }
+
+
+
+    return 0;
+
+
+
+}
+
+
+
+
+
+=================exercicio 10)
+
+
+
+int main()
+
+{
+
+    float i, n, s, j;
+
+    printf("insira o valor da quantidade N de numeros\n");
+
+    scanf("%f", &n);
+
+    i=2;
+
+    s=2/n;
+
+
+
+    for(i; i<=n; i++){
+
+        s = s + (pow(2,i)/(n-(i-1)));
+
+
+
+        }
+
+    printf("o valor da somatoria e igual a %f", s);
+
+
+
+
+
+    return 0;
+
+
+
+}
+
+
+
+=================exercicio 11)
+
+
+
+#include<stdio.h>
+
+#include<math.h>
+
+
+
+
+
+int main()
+
+{
+
+    int n, i, j;
+
+    float soma, fatorial, potencia;
+
+
+
+    printf("Informe o valor de N:");
+
+    scanf("%d",&n);
+
+
+
+    soma =0;
+
+    for (i = 1; i <= n; i++)
+
+    {
+
+        fatorial = 1;
+
+        for (j = i; j > 1; j--)
+
+        {
+
+            fatorial = fatorial * j;
+
+        }
+
+
+
+        potencia = 1;
+
+        for (j = 1; j <= i; j++)
+
+        {
+
+            potencia = potencia * n;
+
+        }
+
+
+
+        soma = soma + (potencia / fatorial);
+
+    }
+
+    soma = 1 + soma;
+
+    printf("A soma dos %d primeiros termos da serie de Taylos e %f", n, soma);
+
+
+
+    fflush(stdin);
+
+    return 0;
+
+
+
+}
+
+
+
+=================exercicio 12)
+
+
+
+int main()
+
+{
+
+    int aux1, num;
+
+
+
+    printf("Digite um numero diferente de zero: ");
+
+    scanf("%d",&num);
+
+    num=aux1;
+
+
+
+    while(num!=0)
+
+    {
+
+        printf("Digite um numero diferente de zero: ");
+
+        scanf("%d",&num);
+
+
+
+        if(num>aux1)
+
+        {
+
+            aux1=num;
+
+        }
+
+    }
+
+
+
+    printf("O maior numero e: %d",aux1);
+
+
+
+    return 0;
+
+}
+
+
+
+
+
+=================exercicio 13)
+
+
+
+int main()
+
+{
+
+
+
+
+
+    int num1, num, base=2, i, ind=0;
+
+    char j='A', aux1, aux2[1000], aux3[1000];
+
+    char aux4(int);
+
+
+
+    printf("digite um numero (em base 10) que sera convertido (em basa 2): ");
+
+    scanf("%d",&num);
+
+    num1 = num;
+
+    for(i=0; i<1000; i++)
+
+        aux3[i] = 0;
+
+    while(num>0)
+
+    {
+
+        aux1 = num%base;
+
+        if(aux1 > 9)
+
+        {
+
+            aux1 = aux4(aux1);
+
+            aux3[ind]=1;
+
+
+
+        }
+
+
+
+        aux2[ind] = aux1;
+
+        ++ind;
+
+        num = num / base;
+
+    }
+
+    printf("%d(10) = ",num1);
+
+    j=ind;
+
+    while(aux2[j]==0)
+
+        j--;
+
+    for(; j>=0; j--)
+
+    {
+
+        if(aux3[j]==1)
+
+            printf("%c",aux2[j]);
+
+        else
+
+            printf("%d",aux2[j]);
+
+
+
+    }
+
+    printf("(%d)\n",base);
+
+
+
+}
+
+char aux4(NUM)
+
+{
+
+    int a;
+
+    char b='A';
+
+    for(a=10; a<NUM; a++)
+
+        b++;
+
+    return b;
+
+}
+
+
+
+
+
+=================exercicio 14)
+
+
+
+int main()
+
+{
+
+    int aux1, aux2, resto;
+
+
+
+
+
+    printf("Digite o primeiro numero:  ");
+
+    scanf("%d", &aux1);
+
+    printf("Digite o segundo numero:  ");
+
+    scanf("%d", &aux2);
+
+
+
+
+
+    resto=aux1%aux2;
+
+
+
+    while(resto!= 0)
+
+    {
+
+        aux1 = aux2;
+
+        aux2 = resto;
+
+        resto = aux1%aux2;
+
+    }
+
+    printf("MDC = %d\n", aux2);
+
+    return 0;
+
+}
+
+
+
+=================exercicio 15)
+
+
+
+#include<stdio.h>
+
+#include<math.h>
+
+
+
+void main()
+
+{
+
+
+
+    float x0, xn, fx_0, fx_n, h, somatorio, somatorio_parcial, integral, i;
+
+
+
+    printf("Informe os valores de x0, xn, h:\n");
+
+    scanf("%f%f%f", &x0, &xn, &h);
+
+
+
+    fx_0 = ((3 * (x0 * x0)) - (2 * x0));
+
+    printf("Com h %.2f, resultado %f\n", x0, fx_0);
+
+
+
+    somatorio = 0;
+
+    for (i = x0 + h; i < xn; i = i+h)
+
+    {
+
+        somatorio_parcial = ((3 * (i * i)) - (2 * i));
+
+        printf("Com h %.2f, resultado %f\n",i,somatorio_parcial);
+
+
+
+        somatorio = somatorio + somatorio_parcial;
+
+    }
+
+
+
+    fx_n = ((3 * (xn * xn)) - (2 * xn));
+
+    printf("Com h %.2f, resultado %f\n", xn, fx_n);
+
+
+
+    integral = (h / 2) * (fx_0 + (2 * somatorio) + fx_n);
+
+
+
+    printf("\n\nValor final da integral de %f a %f, com passo de integracao %.2f eh %f",x0, xn, h, integral);
+
+    printf("\n\n");
+
+    printf("Detalhar: %.2f / 2 [ %f + 2(%f) + %f ]", h, fx_0, somatorio, fx_n);
+
+   return 0;
+
+}
+
