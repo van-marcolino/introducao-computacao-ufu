@@ -1,6 +1,3 @@
-exercício 1)
-
-A)
 
 
 include <stdlib.h>
@@ -24,7 +21,6 @@ return 0;
 
 
 
-B)
 
 #include <stdio.h>
 
@@ -53,7 +49,7 @@ int main()
 }
 
 
-C)
+
 
 #include <stdio.h>
 
@@ -89,7 +85,7 @@ return 0;
 }
 
 
-D)
+
 
 
 #include <stdio.h>
@@ -128,7 +124,6 @@ return 0;
 }
 
 
-exercício 2)
 
 
 #include <stdio.h>
@@ -200,26 +195,6 @@ return 0;
 }
 
 
-a)V
-
-b)V
-
-c)V
-
-d)F
-
-e)V
-
-f)V
-
-g)V
-
-h)V
-
-i)V
-
-
-exercício 3)
 
 
 #include <stdio.h>
@@ -252,7 +227,6 @@ return 0;
 
 
 
-exercício 4)
 
 
 #include <stdio.h>
@@ -285,7 +259,6 @@ return 0;
 
 
 
-exercício 5)
 
 
 #include <stdio.h>
@@ -314,7 +287,6 @@ int main(){
 
 
 
-exercício 6)
 
 
 #include <stdio.h>
@@ -345,8 +317,6 @@ int main(){
 }
 
 
-
-exercício 7)
 
 
 
@@ -379,8 +349,6 @@ int main(){
 
 
 
-exercício 8)
-
 
 #include <stdio.h>
 
@@ -409,7 +377,6 @@ int main(){
 
 
 
-exercício 9)
 
 
 #include <stdio.h>
@@ -443,8 +410,6 @@ int main(){
 
 
 
-exercício 10)
-
 
 #include <stdio.h>
 
@@ -475,8 +440,6 @@ int main(){
 
 
 
-exercício 11)
-
 
 #include <stdio.h>
 
@@ -505,8 +468,6 @@ int main(){
 }
 
 
-
-exercício 12)
 
 
 #include <stdio.h>
@@ -546,8 +507,6 @@ int main(){
 }
 
 
-exercício 13)
-
 
 #include <stdio.h>
 
@@ -571,10 +530,6 @@ int main(){
     return 0;
 
 }
-
-
-
-exercício 14)
 
 
 #include <stdio.h>
@@ -606,8 +561,6 @@ int main()
     return 0;
 
 }
-
- exercício 15)
 
 
 #include <stdio.h>
