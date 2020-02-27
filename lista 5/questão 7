@@ -1,0 +1,47 @@
+float media (float n1, float n2, float n3)
+{
+    char a='a', p='p', c;
+    float mediaA, mediaP;
+    printf("Insira uma letra, 'a' para media aritmetica e 'p' para media ponderada:\n");
+    scanf("%s", &c);
+    switch (c)
+    {
+    case 'a':
+        mediaA = (n1+n2+n3)/3;
+        printf("Media Aritmetica igual a %f", mediaA);
+        break;
+    case 'p':
+        mediaP = (n1+(n2*2)+(n3*3))/6;
+        printf("Media Ponderada igual a %f", mediaP);
+        break;
+    default:
+        printf("Funcao nao desejada.");
+        return 0;
+    }
+    return 0;
+}
+int main ()
+{
+    float n1, n2, n3;
+    printf("Insira tres notas entre 0 e 100:\n");
+    scanf("%f %f %f", &n1, &n2, &n3);
+    if (n1>=0 && n2>=0 && n3>=0)
+    {
+        if (n1<=100 && n2<=100 && n3<=100)
+        {
+            media(n1,n2,n3);
+        }
+        else
+        {
+            printf("Numero n desejado");
+            return 0;
+        }
+    }
+    else
+    {
+        printf("Numero n desejado");
+        return 0;
+    }
+
+    return 0;
+}
