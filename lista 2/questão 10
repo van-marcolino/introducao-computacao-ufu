@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main()
+{
+ int M;
+ float PLT100, PMT100, TPr;
+ printf("Enter the number of miles: ");
+ scanf("%d",&M);
+ if(M <= 100)
+ {
+ PLT100 = M * 0.25;
+ PMT100 = 0;
+ }
+ else
+ {
+ PLT100 = 100 * 0.25;
+ PMT100 = (M - 100) * 0.15;
+ }
+ TPr=PLT100+PMT100;
+ printf("\nTotal Price = %f", TPr);
+
+ return 0;
+}
