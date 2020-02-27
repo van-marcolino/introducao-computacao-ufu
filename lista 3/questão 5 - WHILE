@@ -1,0 +1,33 @@
+int main()
+
+{
+
+    int fat = 1;
+
+    int i = 1;
+
+    int N;
+
+    printf("insira o valor do numero para calcular o fatorial: \n");
+
+    scanf("%d", &N);
+
+
+
+    while(i <= N)
+
+    {
+
+        fat = fat * i;
+
+        i++;
+
+    }
+
+    printf("fatorial calculado= %d \n", fat);
+
+
+
+    return 0;
+
+}
