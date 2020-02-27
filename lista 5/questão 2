@@ -1,0 +1,24 @@
+void mes (int m)
+{
+    if (m==1) printf("O mes 1 eh Janeiro.");
+    if (m==2) printf("O mes 2 eh Fevereiro.");
+    if (m==3) printf("O mes 3 eh Marco.");
+    if (m==4) printf("O mes 4 eh Abril.");
+    if (m==5) printf("O mes 5 eh Maio.");
+    if (m==6) printf("O mes 6 eh Junho.");
+    if (m==7) printf("O mes 7 eh Julho.");
+    if (m==8) printf("O mes 8 eh Agosto.");
+    if (m==9) printf("O mes 9 eh Setembro");
+    if (m==10) printf("O mes 10 eh Outubro.");
+    if (m==11) printf("O mes 11 eh Novembro.");
+    if (m==12) printf("O mes 12 eh Dezembro");
+    if((m>12)||(m<1)) printf("Numero Invalido");
+}
+int main ()
+{
+    int m;
+    printf("Insira um numero referente a um mes do ano: \n");
+    scanf("%d", &m);
+    mes(m);
+    return 0;
+}
