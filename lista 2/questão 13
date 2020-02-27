@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+int main ()
+{
+    int num, x;
+    int t = 1;
+
+    srand (time(NULL));
+    x = rand() % 11;
+
+    while(num != x && t <= 3)
+    {
+        printf("Digite um numero entre 0 e 10 \n");
+        scanf("%d", &num);
+
+        if(num==x)
+            printf("voce acertou!!!");
+        else if(num != x)
+            printf("=====errado=====\n");
+        t++;
+    }
+    if(t == 3)
+        printf("\ntentativas esgotadas");
+    printf("\nO numero sorteado foi: %d", x);
+    return 0;
+}
