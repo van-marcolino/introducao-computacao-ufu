@@ -1,0 +1,50 @@
+
+int main()
+
+{
+
+    float N, valor, soma1 = 0, soma2 = 0, mediaA, mediaH;
+
+    printf("Insira os numeros para fazer a media aritmetica e a media harmonica: \n");
+
+    printf("Digite 0 para terminar o programa \n\n");
+
+
+
+    do
+
+    {
+
+        printf("Digite o valor \n");
+
+        scanf("%f", &valor);
+
+        if(valor != 0 ){
+
+        soma1 = soma1 + (1/valor);
+
+        soma2 = soma2 + valor;
+
+        N++;
+
+        printf("%f \n", soma1);}
+
+    }
+
+    while(valor != 0);
+
+
+
+    mediaH = (N)/soma1;
+
+    mediaA = soma2/(N);
+
+    printf("\nMedia Aritmetica: %f\n", mediaA);
+
+    printf("\nMedia Harmonica: %f\n", mediaH);
+
+    printf("\nA quantidade de numeros inseridos foi igual a %f\n", N);
+
+    return 0;
+
+}
