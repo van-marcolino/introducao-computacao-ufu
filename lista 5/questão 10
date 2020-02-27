@@ -1,0 +1,38 @@
+int fatorial(int fat)
+{
+    int cont=fat, resultado=1;
+    do
+    {
+        resultado=resultado*cont;
+        cont--;
+    }
+    while(cont>0);
+    return resultado;
+
+}
+float sen(float x)
+{
+    int cont=0, y=0, z;
+    float soma=0;
+
+    do
+    {
+        y=2*cont+1;
+        z=fatorial(y);
+        soma=soma+(pow(-1,cont)*pow(x, y))/z;
+        cont++;
+    }
+    while(cont<=10);
+    return soma;
+
+}
+
+int main()
+{
+    float x, seno;
+    printf("Digite um valor de seno em graus:\n");
+    scanf("%f", &x);
+    seno=sen(x*M_PI/180);
+    printf("o valor aproximado do seno usando a formula de Taylor eh %f", seno);
+    return 0;
+}
