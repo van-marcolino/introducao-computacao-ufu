@@ -1,0 +1,25 @@
+int main(){
+   int n1[10], n2[10], n3[10], nf[10], i;
+   for(i=0; i<10; i++)
+
+   {
+      printf("insira o valor das notas do aluno %d: ", i+1);
+
+       scanf("%d %d %d", &n1[i], &n2[i], &n3[i]);
+
+   }
+   for(i=0; i<10; i++){
+       nf[i]=n1[i]+n2[i]+n3[i];
+   }
+   printf("Aluno \t  Nota1  Nota2  Nota3    NotaFinal\n");
+   for(i=0; i<10; i++){
+        if(i<9){
+            printf("Aluno%d    %d\t %d\t%d        %d\n", i+1, n1[i], n2[i], n3[i], nf[i]);
+        }else{
+            printf("Aluno%d   %d\t %d\t%d        %d\n", i+1, n1[i], n2[i], n3[i], nf[i]);
+        }
+
+
+   }
+   return 0;
+}
