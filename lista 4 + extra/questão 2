@@ -1,0 +1,35 @@
+int main()
+{
+    float numeros[20], media=0, maior=0;
+    int i, count=0;
+    printf("insira os 20 valores dos vetores entre 0 e 100:");
+    for(i=0; i<20; i++)
+    {
+        scanf("%f", &numeros[i]);
+        while(numeros[i]<0 || numeros[i]>100)
+        {
+            printf("digite novamente o numero: ");
+            scanf("%f", &numeros[i]);
+        }
+
+        if(numeros[i]>maior)
+        {
+            maior=numeros[i];
+        }
+        media=numeros[i]+media;
+
+    }
+    media=media/20;
+    printf("o valor da media dos numeros e igual a %f", media);
+    printf("\n\n");
+    printf("o maior valor da sequencia e igual a %f", maior);
+    for(i=0; i<20; i++)
+    {
+        if(numeros[i]>media)
+        {
+            count++;
+        }
+    }
+    printf("\n\n");
+    printf("quantidade de numeros maiores que a media %d", count);
+    return 0;
