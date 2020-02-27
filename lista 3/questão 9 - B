@@ -1,0 +1,66 @@
+
+#include <stdlib.h>
+
+#include <stdio.h>
+
+#include <time.h>
+
+
+
+int main()
+
+{
+
+    int num, x;
+
+    int t = 0;
+
+
+
+    srand(time(NULL));
+
+    x = rand() % 20;
+
+
+
+    printf("===digite um numero de 1 a 20===\n\n");
+
+
+
+    while (num != x)
+
+    {
+
+        printf("\nDigite um numero: ");
+
+        scanf("%d", &num);
+
+
+
+        if(num == x)
+
+            printf("\n\nvoce acertou: numero de tentativas >> %d <<\n\n", t);
+
+        else if(num > x)
+
+            printf("\n====o valor e menor:====\n");
+
+        else if(num < x)
+
+            printf("\n====o numero e maior:====\n");
+
+        else if(num != x)
+
+            printf("=====errado=====");
+
+        t++;
+
+    }
+
+
+
+    return 0;
+
+
+
+}
