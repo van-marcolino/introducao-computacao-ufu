@@ -1,0 +1,38 @@
+int main()
+{
+
+    float a, b, c, x1, x2, x;
+    printf("insira os valores de a, b e c \n");
+    scanf("%f %f %f", &a, &b, &c);
+    if(a!=0)
+    {
+        x=sqrt((b*b)-(4*a*c));
+        printf("valor %.2f \n", x);
+        if(((b*b)-(4*a*c))<0)
+        {
+            printf("nao existe solucao pertencente aos numeros reais para esse problema \n");
+        }
+        else
+        {
+            x1=(-b+x)/(2*a);
+            x2=(-b-x)/(2*a);
+
+            if(x1!=x2)
+            {
+                printf("as duas solucoes distintas para essa equacao sao x1= %.2f e x2= %.2f \n", x1, x2);
+            }
+            else
+            {
+                printf("x1 e x2 tem a mesma solucao, que e %.2f \n", x1);
+            }
+        }
+    }
+
+    else
+    {
+        printf("o sistema e linear, portanto possui a equacao igual a  %.2f x + %.2f \n", b, c);
+    }
+
+
+    return 0;
+}
