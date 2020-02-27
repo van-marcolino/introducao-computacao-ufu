@@ -1,0 +1,15 @@
+int main()
+{
+    char nome[100], vetor[100], vetor2[100];
+    int i=0;
+    printf("Insira o nome e o sobrenome do cidadao: ");
+    gets(nome);
+    printf("Nome Sobrenome: \n");
+    printf("%s\n\n", nome);
+    sscanf(nome,"%s %s", vetor, vetor2);
+    printf("Sobrenome, Nome: \n");
+    strcat(vetor2, ", ");
+    strcat(vetor2, vetor);
+    printf("%s", vetor2);
+    return 0;
+}
