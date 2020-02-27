@@ -1,0 +1,35 @@
+int main(){
+   float sexo, pesoid= 0, peso= 0, h= 0, x= 0, y= 0;
+   printf("insira o genero do usuario, digite 1 para masculino e 2 para feminino \n");
+   fflush(stdin);
+   scanf("%f", &sexo);
+   printf("insira a altura do usuario \n");
+   fflush(stdin);
+   scanf("%f", &h);
+   printf("insira o peso do usuario \n");
+   fflush(stdin);
+   scanf("%f", &peso);
+    if(sexo==1){
+        pesoid=(72.7*h)-58;
+        printf("o peso ideal do usuario e %.2f \n", pesoid);
+        x=((peso*100)/pesoid);
+        y=x-100;
+        if(y>0.05){
+            printf("o usuario esta %.2f porcento acima do peso ideal \n", y);
+        }
+        else{
+            printf("o usuario esta %.2f porcento abaixo do peso ideal", y);
+        }}
+  if(sexo==2){
+        pesoid=(62.1*h)-44.7;
+        printf("o peso ideal do usuario e %.2f \n", pesoid);
+        x=((peso*100)/pesoid);
+        y=x-100;
+        if(y>0.05){
+            printf("o usuario esta %.2f porcento acima do peso ideal \n", y);
+        }
+        else{
+            printf("o usuario esta %.2f porcento abaixo do peso ideal \n", y);
+        }}
+
+}
