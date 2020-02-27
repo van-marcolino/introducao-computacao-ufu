@@ -1,0 +1,43 @@
+int main()
+
+{
+
+    int aux1, aux2, resto;
+
+
+
+
+
+    printf("Digite o primeiro numero:  ");
+
+    scanf("%d", &aux1);
+
+    printf("Digite o segundo numero:  ");
+
+    scanf("%d", &aux2);
+
+
+
+
+
+    resto=aux1%aux2;
+
+
+
+    while(resto!= 0)
+
+    {
+
+        aux1 = aux2;
+
+        aux2 = resto;
+
+        resto = aux1%aux2;
+
+    }
+
+    printf("MDC = %d\n", aux2);
+
+    return 0;
+
+}
