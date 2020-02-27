@@ -1,0 +1,224 @@
+
+#include <stdlib.h>
+
+#include <stdio.h>
+
+#include <math.h>
+
+int main()
+
+{
+
+    int linha, coluna, i, t, count, count1;
+
+    char L;
+
+    printf("insira os quantidade de linhas e colunas: \n");
+
+    scanf("%d %d", &linha, &coluna);
+
+    fflush(stdin);
+
+    printf("insira o caractere desejado: \n");
+
+    scanf("%c", &L);
+
+    printf("\n\n");
+
+    for(i = 0; i < linha; i++)
+
+    {
+
+        for(t = 0; t < coluna; t++)
+
+        {
+
+            printf("%c", L);
+
+        }
+
+        printf("\n");
+
+    }
+
+    printf("\n\n");
+
+    for(i = 0; i < linha; i++)
+
+    {
+
+        for(t = 0; t < coluna; t++)
+
+        {
+
+            if ((i==0 || i==linha-1)||(t==0 || t==coluna-1))
+
+            {
+
+                printf("%c", L);
+
+            }
+
+            else
+
+            {
+
+                printf(" ");
+
+            }
+
+            if(t==coluna-1)
+
+            {
+
+                printf(" ");
+
+            }
+
+        }
+
+        printf("\n");
+
+    }
+
+    printf("\n\n");
+
+    count=0;
+
+    for(i = 0; i < linha; i++)
+
+    {
+
+        count=i+1;
+
+        for(t = 0; t < coluna; t++)
+
+        {
+
+            if (count != 0)
+
+            {
+
+                printf("%c", L);
+
+                count--;
+
+            }
+
+
+
+        }
+
+        printf("\n");
+
+    }
+
+    printf("\n\n");
+
+    count=linha;
+
+    count1=0;
+
+    for(i = 0; i < linha; i++)
+
+    {
+
+        count=linha-i;
+
+        count1=i+1;
+
+        for(t = 0; t < coluna; t++)
+
+        {
+
+            if (count != 0)
+
+            {
+
+                printf(" ");
+
+                count--;
+
+                if(count == 0)
+
+                {
+
+                    while(count1 != 0)
+
+                    {
+
+                        printf("%c", L);
+
+                        count1--;
+
+                    }
+
+                }
+
+            }
+
+
+
+
+
+        }
+
+        printf("\n");
+
+    }
+
+    printf("\n\n");
+
+
+
+    for(i = 0; i < linha; i++)
+
+    {
+
+        count=i;
+
+        count1=linha-1;
+
+        for(t = 0; t < coluna; t++)
+
+        {
+
+            if (count != 0)
+
+            {
+
+                printf(" ");
+
+                count--;
+
+            }
+
+            else
+
+            {
+
+                printf("%c", L);
+
+            }
+
+
+
+
+
+        }
+
+        printf("\n");
+
+    }
+
+
+
+
+
+
+
+
+
+    return 0;
+
+}
