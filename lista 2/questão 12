@@ -1,0 +1,16 @@
+int main(){
+  float a, b, c;
+  printf("insira as medidas dos lados de um triangulo \n");
+  scanf("%f %f %f", &a, &b, &c);
+    if(a>(b+c)||b>(a+c)||c>(a+b)){
+    printf("os valores insiridos nao formam um triangulo \n");}
+    else{
+        if((a==b)&&(b==c))
+            printf("o triangulo e equilatero \n");
+    else{
+      if (((a==c)&&(b!=c))||((b==c)&&(c!=a))||((a==b)&&(b!=c)))
+            printf("o tiangulo e isosceles \n");
+      else{
+        printf("o triangulo e escaleno \n");}}}
+        return 0;
+}
