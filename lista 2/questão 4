@@ -1,0 +1,17 @@
+int main() {
+   float a, c, f;
+   printf("escolha a forma de conversao, digite 1 para conversao de C para F e digite 2 para conversao de F para C \n");
+   scanf("%f", &a);
+   if(a==1){
+    printf("insira o valor da temperatura C \n");
+    scanf("%f", &c);
+    f=(1.8*c)+32;
+    printf("valor da temperatura em F e igual a %f", f);}
+  if(a==2){
+    printf("insira o valor da temperatura F \n");
+    scanf("%f", &f);
+    c=(f-32)/(1.8);
+    printf("o valor da temperatura em C e igual a %f", c);
+  }
+    return 0;
+   }
