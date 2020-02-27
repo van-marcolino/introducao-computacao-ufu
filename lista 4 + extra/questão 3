@@ -1,0 +1,52 @@
+int main()
+{
+    int valores [15], cont, maior, menor, quantidade=0, vetorMenor, vetorMaior, aux1, aux2;
+    for(cont=0; cont<15; cont++)
+    {
+        printf("digite...");
+        scanf("%d", &valores[cont]);
+        if(cont==0)
+        {
+            maior=valores[0];
+            menor=valores[0];
+        }
+        if(valores[cont]>=maior)
+        {
+
+            if(valores[cont]==maior)
+            {
+                quantidade++;
+            }
+            else
+            {
+                quantidade=1;
+            }
+            maior=valores[cont];
+            vetorMaior=cont;
+
+        }
+        if(valores[cont]<menor)
+        {
+            menor=valores[cont];
+            vetorMenor=cont;
+        }
+    }
+    aux1=valores[0];
+    valores[0]=valores[vetorMenor];
+    valores[vetorMenor]=aux1;
+
+    aux2=valores[14];
+    valores[14]=valores[vetorMaior];
+    valores[vetorMaior]=aux2;
+    
+    printf("\nA sequencia com o menor valor em primeiro lugar e o maior valor em ultimo fica: \n");
+    for(cont=0; cont<15; cont++)
+    {
+        printf("%d ", valores[cont]);
+
+    }
+    printf("\nO maior valor eh: %d", maior);
+    printf("\nO maior numero apareceu %d vezes", quantidade);
+    printf("\nO menor valor eh: %d", menor);
+    return 0;
+}
