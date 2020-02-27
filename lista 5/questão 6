@@ -1,0 +1,30 @@
+void perfeito(int a)
+{
+    float aux, b;
+    int inteiro;
+    b=sqrt(a);
+    aux = a/4;
+    inteiro = b;
+    if(a%2 == 0 && inteiro == b) //o numero sendo par, entra aqui.
+    {
+        if ((int)b%2 == 0 && aux == (int)aux) // todo quadrado perfeito quando sai da raiz tem resultado par
+            printf("O numero %d eh um quadrado perfeito", a);
+        else
+            printf("O numero %d NAO eh um quadrado perfeito", a);
+    }
+    else // o numero sendo impar, entra aqui
+    {
+        if (a%8 == 1 && (int)b%2 != 0) // regra de que todo impar que é gradrado perfeito se for dividido por 8 tem resto 1 e toda raiz impar tem resultado impar.
+            printf("O numero %d eh um quadrado perfeito", a);
+        else
+            printf("O numero %d NAO eh um quadrado perfeito", a);
+    }
+}
+int main ()
+{
+    int a;
+    printf("Insira um numero inteiro:\n");
+    scanf("%d", &a);
+    perfeito(a);
+    return 0;
+}
