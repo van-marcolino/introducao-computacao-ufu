@@ -1,0 +1,72 @@
+int main()
+{
+    int a[4][4], l, c;
+    for(l=0; l<4; l++)
+    {
+        for(c=0; c<4; c++)
+        {
+            printf("Entre com o elemento da linha %d e coluna  %d da matriz 4x4: ", l, c);
+            scanf("%d", &a[l][c]);
+        }
+        printf("\n");
+    }
+    for(l=0; l<4; l++)
+    {
+        for(c=0; c<4; c++)
+        {
+            printf("%d ", a[l][c]);
+        }
+        printf("\n");
+    }
+    printf("\nMatriz diagonal D \n");
+    for(l=0; l<4; l++)
+    {
+        for(c=0; c<4; c++)
+        {
+            if(l==c)
+            {
+                printf("%d ", a[l][c]);
+            }
+            else
+            {
+                printf("0 ");
+            }
+        }
+        printf("\n");
+    }
+    printf("\nMatriz triangular superior U \n");
+    for(l=0; l<4; l++)
+    {
+        for(c=0; c<4; c++)
+        {
+            if(l<c)
+            {
+                printf("%d ", a[l][c]);
+            }
+            else
+            {
+                printf("0 ");
+            }
+        }
+        printf("\n");
+    }
+    printf("\nMatriz triangular inferior L \n");
+    for(l=0; l<4; l++)
+    {
+        for(c=0; c<4; c++)
+        {
+            if(l>c)
+            {
+                printf("%d ", a[l][c]);
+            }
+            else
+            {
+                printf("0 ");
+            }
+        }
+        printf("\n");
+    }
+
+
+    return 0;
+}
