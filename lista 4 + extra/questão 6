@@ -1,0 +1,14 @@
+int main()
+{
+    char nome[100];
+    char sobrenome[100];
+    printf("Insira o nome e o sobrenome do cidadao: ");
+    scanf("%s %s", &nome, &sobrenome);
+    printf("Nome Sobrenome\n");
+    printf("%s %s", nome, sobrenome);
+    printf("\n\n");
+    printf("Sobrenome, Nome\n");
+    printf("%s, %s", sobrenome, nome);
+    printf("\n\n");
+    return 0;
+}
