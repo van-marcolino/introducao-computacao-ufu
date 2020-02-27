@@ -1,0 +1,14 @@
+float conversao (float t)
+{
+    float c;
+    c=(t-32)/1.8;
+    return c;
+}
+int main ()
+{
+    float temperatura;
+    printf("Insira uma temperatura em Farenheit para conversao para Celsius: \n");
+    scanf("%f", &temperatura);
+    printf("O numero convertido eh %f", conversao(temperatura));
+    return 0;
+}
