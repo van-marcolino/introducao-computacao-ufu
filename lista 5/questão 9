@@ -1,0 +1,30 @@
+void fibonacci(int n)
+{
+    int a, b, aux, i;
+    a = 0;
+    b = 1;
+    printf("%d, %d, ",a, b);
+    for(i = 1; i < n; i++)
+    {
+        aux = a + b;
+        a = b;
+        b = aux;
+        if(i==(n-1))
+        {
+            printf(" %d.", aux);
+        }
+        else
+        {
+            printf(" %d,", aux);
+        }
+    }
+}
+int main()
+{
+    int n;
+    printf("Digite um numero: ");
+    scanf("%d", &n);
+    printf("Serie de Fibonacci:\n");
+    fibonacci(n);
+    return 0;
+}
