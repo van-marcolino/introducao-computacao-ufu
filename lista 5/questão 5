@@ -1,0 +1,14 @@
+int hora (int h, int m, int s)
+{
+    int quantidade;
+    quantidade=(3600*h)+(60*m)+s;
+    return quantidade;
+}
+int main ()
+{
+    int h, m, s;
+    printf("Insira a quantidade de horas, minutos e segundos:\n");
+    scanf("%d %d %d", &h, &m, &s);
+    printf("A quantidade de segundos eh %d", hora(h,m,s));
+    return 0;
+}
