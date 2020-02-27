@@ -1,0 +1,61 @@
+#include <stdio.h>
+
+int main()
+{
+    int a[4][4], l, c, vetor[4]= {0,0,0,0}, soma=0;
+    for(l=0; l<4; l++)
+    {
+        for(c=0; c<4; c++)
+        {
+            printf("entre com o elemento da linha %d e coluna  %d da matriz 4x4: ", l, c);
+            scanf("%d", &a[l][c]);
+        }
+        printf("\n");
+    }
+    for(l=0; l<4; l++)
+    {
+        for(c=0; c<4; c++)
+        {
+            printf("%d ", a[l][c]);
+
+        }
+
+        printf("\n");
+
+    }
+    printf("\no maior valor de cada linha eh: \n");
+    for(l=0; l<4; l++)
+    {
+        for(c=0; c<4; c++)
+        {
+            if (vetor[l]<a[l][c])
+            {
+                vetor[l]=a[l][c];
+
+            }
+        }
+        printf("%d", vetor[l]);
+        if(l<3)
+        {
+            printf(", ");
+        }
+    }
+    printf("\na soma  da diagonal principal eh igual a ");
+    for(l=0; l<4; l++)
+    {
+        for(c=0; c<4; c++)
+        {
+            if(l==c)
+            {
+                soma=soma+a[l][c];
+                printf("%d", a[l][c]);
+            }
+        }
+        if(l<3)
+        {
+            printf(" + ");
+        }
+    }
+    printf(" = %d", soma);
+    return 0;
+}
