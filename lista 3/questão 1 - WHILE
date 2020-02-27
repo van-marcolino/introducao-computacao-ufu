@@ -1,0 +1,45 @@
+int main()
+
+{
+
+    int N, count = 1;
+
+    printf("insira um valor para N: ");
+
+    scanf("%d", &N);
+
+
+
+    printf("ordem crescente \n");
+
+    while(count <= N)
+
+    {
+
+        printf("%d ", count);
+
+        count++;
+
+    }
+
+
+
+    printf("\nordem decrescente \n");
+
+    count=N;
+
+    while(count >= 1)
+
+    {
+
+        printf("%d ", count);
+
+        count--;
+
+    }
+
+    getchar();
+
+    return 0;
+
+}
