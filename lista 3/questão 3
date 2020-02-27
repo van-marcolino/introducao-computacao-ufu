@@ -1,0 +1,68 @@
+
+#include <stdlib.h>
+
+#include <stdio.h>
+
+#include <math.h>
+
+int main()
+
+{
+
+    int i, f, d1, d2, maior, menor, aux;
+
+    printf("insira o intervalo de numeros: \n");
+
+    scanf("%d %d", &i, &f);
+
+    printf("insira os dois numeros para descobrir seus divisores: \n");
+
+    scanf("%d %d", &d1, &d2);
+
+    if(i > f)
+
+    {
+
+        maior=i;
+
+        menor=f;
+
+    }
+
+    else
+
+    {
+
+        maior=f;
+
+        menor=i;
+
+    }
+
+    aux=menor;
+
+    printf("os divisores de %d e %d sao", d1, d2);
+
+    while(aux <= maior)
+
+    {
+
+        if(aux%d1==0 && aux%d2==0)
+
+        {
+
+        printf("\n%d \n", aux);
+
+        }
+
+        aux++;
+
+    }
+
+
+
+    return 0;
+
+
+
+}
