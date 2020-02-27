@@ -1,0 +1,11 @@
+{
+    float vendas, x;
+    printf("insira o valor da quantidade de vendas que o funcionario fez \n");
+    scanf("%f", &vendas);
+    if(vendas>=10000)
+        x=2000+(vendas*0.08);
+      else
+        x=2000+(vendas*0.05);
+     printf("valor do salario do funcionario %f", x);
+     return 0;
+}
