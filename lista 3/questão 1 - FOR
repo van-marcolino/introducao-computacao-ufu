@@ -1,0 +1,38 @@
+
+int main()
+
+{
+
+    int N;
+
+    int count = 0;
+
+    printf("insira um valor para N: ");
+
+    scanf("%d", &N);
+
+    printf("ordem crescente ");
+
+    for(count = 1; count <= N; count++)
+
+    {
+
+        printf("%d ", count);
+
+    }
+
+    printf("ordem decrescente ");
+
+    for(count = N; count >= 1; count--)
+
+    {
+
+        printf("%d ", count);
+
+    }
+
+    getchar();
+
+    return 0;
+
+}
