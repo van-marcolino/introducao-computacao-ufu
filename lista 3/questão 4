@@ -1,0 +1,26 @@
+
+int main(void)
+
+{
+
+    int x;
+
+    printf("digite um valor entre 40 e 255: ");
+
+    scanf("%d", &x);
+
+    if(x < 40 || x > 255){
+
+        printf("valor n desejado");
+
+    }
+
+    else {printf("%c", x);
+
+    if(x< 'a')
+
+        getchar();
+
+    return 0;
+
+}}
