@@ -1,0 +1,46 @@
+float operacao (float x, float y)
+{
+    char a='+', b='-', c='*', d='/';
+    float soma, subtrai, multiplica, divide;
+    printf("Insira o simbolo de uma operacao '+', '-', '*', '/': \n");
+    scanf("%s", &c);
+    switch (c)
+    {
+    case '+':
+        soma = x+y;
+        printf("O valor da soma eh %f", soma);
+        break;
+    case '-':
+        subtrai = x-y;
+        printf("O valor da subtracao eh %f", subtrai);
+        break;
+    case '*':
+        multiplica = x*y;
+        printf("O valor da multiplicacao eh %f", multiplica);
+        break;
+    case '/':
+        if (y==0)
+        {
+            printf("100.000.\n");
+            printf("O denominador foi igual a zero, operacao invalida.");
+            break;
+        }
+        else
+        {
+        divide = x/y;
+        printf("O valor da divisao eh %f", divide);
+        break;
+        }
+    default:
+        return 0;
+    }
+    return 0;
+}
+int main ()
+{
+    float x, y;
+    printf("Insira dois numeros:\n");
+    scanf("%f %f", &x, &y);
+    operacao(x,y);
+    return 0;
+}
