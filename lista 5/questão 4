@@ -1,0 +1,14 @@
+float volume (float h, float r)
+{
+    float v;
+    v= h*r*r*3.14;
+    return v;
+}
+int main ()
+{
+    float h, r;
+    printf("Insira o valor da altura e do raio do cilindro:\n");
+    scanf("%f %f", &h, &r);
+    printf("O valor do volume eh %f", volume(h,r));
+    return 0;
+}
