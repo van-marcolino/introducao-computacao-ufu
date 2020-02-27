@@ -1,0 +1,27 @@
+int main()
+
+{
+
+    int N, x;
+
+    int count = 0;
+
+    printf("insira o numero desejado para fazer a tabuada: ");
+
+    scanf("%d", &N);
+
+    while(count <= 10)
+
+    {
+
+        x = N*count;
+
+        printf("%dx%d= %d \n", N, count, x);
+
+        count++;
+
+    }
+
+    return 0;
+
+}
