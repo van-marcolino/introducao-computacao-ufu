@@ -1,0 +1,71 @@
+#include<stdio.h>
+
+#include<math.h>
+
+
+
+
+
+int main()
+
+{
+
+    int n, i, j;
+
+    float soma, fatorial, potencia;
+
+
+
+    printf("Informe o valor de N:");
+
+    scanf("%d",&n);
+
+
+
+    soma =0;
+
+    for (i = 1; i <= n; i++)
+
+    {
+
+        fatorial = 1;
+
+        for (j = i; j > 1; j--)
+
+        {
+
+            fatorial = fatorial * j;
+
+        }
+
+
+
+        potencia = 1;
+
+        for (j = 1; j <= i; j++)
+
+        {
+
+            potencia = potencia * n;
+
+        }
+
+
+
+        soma = soma + (potencia / fatorial);
+
+    }
+
+    soma = 1 + soma;
+
+    printf("A soma dos %d primeiros termos da serie de Taylos e %f", n, soma);
+
+
+
+    fflush(stdin);
+
+    return 0;
+
+
+
+}
