@@ -5,7 +5,7 @@
 int validaSenha();//senha = 1234.
 
 void main(){
-    /** Declaração de variáveis - início */
+    /** DeclaraÃ§Ã£o de variÃ¡veis - inÃ­cio */
     char confirmacao[1];
     char validacao[1], liberacao[1];
     char candidatos[4][20]= {
@@ -17,7 +17,7 @@ void main(){
 
     int cont = 0, votoParticipante, candidatosEleitos;
     int votos[4]= {0,0,0,0};
-    /** Declaração de variáveis - Final */
+    /** DeclaraÃ§Ã£o de variÃ¡veis - Final */
 
     if (validaSenha() == 1) {
         printf("Urna bloqueada!");
@@ -65,22 +65,22 @@ void main(){
             printf("\nDigite o codigo do seu candidato: \n");
             scanf("%d", &votoParticipante);
 
-            if(votoParticipante == 13)//posição zero do vetor, representa o candidato numero 13.
+            if(votoParticipante == 13)//posiÃ§Ã£o zero do vetor, representa o candidato numero 13.
             {
                 votos[0]++;
                 candidatosEleitos=0;
             }
-            if(votoParticipante == 17)//posição um do vetor, representa o candidato de numero 17.
+            if(votoParticipante == 17)//posiÃ§Ã£o um do vetor, representa o candidato de numero 17.
             {
                 votos[1]++;
                 candidatosEleitos=1;
             }
-            if(votoParticipante == 0)//posição dois do vetor, representa votos brancos.
+            if(votoParticipante == 0)//posiÃ§Ã£o dois do vetor, representa votos brancos.
             {
                 votos[2]++;
                 candidatosEleitos=2;
             }
-            if(votoParticipante == 1)//posição três do vetor, representa votos nulos.
+            if(votoParticipante == 1)//posiÃ§Ã£o trÃªs do vetor, representa votos nulos.
             {
                 votos[3]++;
                 candidatosEleitos=3;
