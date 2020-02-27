@@ -1,0 +1,65 @@
+#include<stdio.h>
+
+#include<math.h>
+
+
+
+void main()
+
+{
+
+
+
+    float x0, xn, fx_0, fx_n, h, somatorio, somatorio_parcial, integral, i;
+
+
+
+    printf("Informe os valores de x0, xn, h:\n");
+
+    scanf("%f%f%f", &x0, &xn, &h);
+
+
+
+    fx_0 = ((3 * (x0 * x0)) - (2 * x0));
+
+    printf("Com h %.2f, resultado %f\n", x0, fx_0);
+
+
+
+    somatorio = 0;
+
+    for (i = x0 + h; i < xn; i = i+h)
+
+    {
+
+        somatorio_parcial = ((3 * (i * i)) - (2 * i));
+
+        printf("Com h %.2f, resultado %f\n",i,somatorio_parcial);
+
+
+
+        somatorio = somatorio + somatorio_parcial;
+
+    }
+
+
+
+    fx_n = ((3 * (xn * xn)) - (2 * xn));
+
+    printf("Com h %.2f, resultado %f\n", xn, fx_n);
+
+
+
+    integral = (h / 2) * (fx_0 + (2 * somatorio) + fx_n);
+
+
+
+    printf("\n\nValor final da integral de %f a %f, com passo de integracao %.2f eh %f",x0, xn, h, integral);
+
+    printf("\n\n");
+
+    printf("Detalhar: %.2f / 2 [ %f + 2(%f) + %f ]", h, fx_0, somatorio, fx_n);
+
+   return 0;
+
+}
