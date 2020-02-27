@@ -1,0 +1,100 @@
+
+int main()
+
+{
+
+
+
+
+
+    int num1, num, base=2, i, ind=0;
+
+    char j='A', aux1, aux2[1000], aux3[1000];
+
+    char aux4(int);
+
+
+
+    printf("digite um numero (em base 10) que sera convertido (em basa 2): ");
+
+    scanf("%d",&num);
+
+    num1 = num;
+
+    for(i=0; i<1000; i++)
+
+        aux3[i] = 0;
+
+    while(num>0)
+
+    {
+
+        aux1 = num%base;
+
+        if(aux1 > 9)
+
+        {
+
+            aux1 = aux4(aux1);
+
+            aux3[ind]=1;
+
+
+
+        }
+
+
+
+        aux2[ind] = aux1;
+
+        ++ind;
+
+        num = num / base;
+
+    }
+
+    printf("%d(10) = ",num1);
+
+    j=ind;
+
+    while(aux2[j]==0)
+
+        j--;
+
+    for(; j>=0; j--)
+
+    {
+
+        if(aux3[j]==1)
+
+            printf("%c",aux2[j]);
+
+        else
+
+            printf("%d",aux2[j]);
+
+
+
+    }
+
+    printf("(%d)\n",base);
+
+
+
+}
+
+char aux4(NUM)
+
+{
+
+    int a;
+
+    char b='A';
+
+    for(a=10; a<NUM; a++)
+
+        b++;
+
+    return b;
+
+}
