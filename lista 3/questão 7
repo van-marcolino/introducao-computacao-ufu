@@ -1,0 +1,39 @@
+int main()
+
+{
+
+    int i, x;
+
+    int y = 0;
+
+    printf("digite um numero inteiro e positivo: \n");
+
+    scanf("%d", &x);
+
+
+
+    for(i = 1; i <= x; i++)
+
+    {
+
+        if(x % i == 0)
+
+        {
+
+            y++;
+
+        }
+
+    }
+
+    if (y == 2)
+
+        printf("o numero %d e primo! \n", x);
+
+    else
+
+        printf("o numero %d nao e primo! \n", x);
+
+    return 0;
+
+}
