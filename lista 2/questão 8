@@ -1,0 +1,21 @@
+int main() {
+float num1, num2, a, x;
+printf("insira os dois numeros desejados \n");
+scanf("%f %f", &num1, &num2);
+printf("digite 1 para multiplicacao, 2 para divisao, 3 para subtracao e 4 para soma \n");
+printf("insira o numero da operacao desejada \n");
+scanf("%f", &a);
+if(a==1){
+    x=num1*num2;
+    printf("o resultado da multiplicacao e igual a %.2f", x);}
+    if(a==2){
+        x=num1/num2;
+        printf("o resultado da divisao e igual a %.2f", x);}
+        if(a==3){
+            x=num1-num2;
+            printf("o resultado da subtracao e igual a %.2f", x);}
+            if(a==4){
+                x=num1+num2;
+                printf("o resultado da soma e igual a %.2f", x);}
+ return 0;
+}
